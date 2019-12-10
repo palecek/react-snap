@@ -1,11 +1,11 @@
 {
-  "name": "react-snap",
-  "version": "1.23.0",
+  "name": "react-snap-argv-options",
+  "version": "1.0.0",
   "description": "Zero-configuration framework-agnostic static prerendering for SPAs",
   "main": "index.js",
-  "author": "stereobooster",
+  "author": "palecek",
   "license": "MIT",
-  "repository": "stereobooster/react-snap",
+  "repository": "palecek/react-snap",
   "engines": {
     "node": ">= 8.6.0"
   },
