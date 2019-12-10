@@ -80,6 +80,12 @@ Change `package.json`:
 }
 ```
 
+Or use commandline options:
+
+```sh
+react-snap --options '{\"source\": \"dist\"}'
+```
+
 Or use `preserveWhitespace: false` in `vue-loader`.
 
 `source` - output folder of webpack or any other bundler of your choice

@@ -11,6 +11,12 @@ const {
 
 const publicUrl = process.env.PUBLIC_URL || homepage;
 
+let argOptions = {}
+
+try {
+  argOptions = JSON.parse(process.argv[process.argv.indexOf('--options') + 1])
+} catch(e) {}
+
 const reactScriptsVersion = parseInt(
   (devDependencies && devDependencies["react-scripts"])
   || (dependencies && dependencies["react-scripts"])
@@ -41,7 +47,8 @@ if (parcel) {
 run({
   publicPath: publicUrl ? url.parse(publicUrl).pathname : "/",
   fixWebpackChunksIssue,
-  ...reactSnap
+  ...reactSnap,
+  ...argOptions
 }).catch(error => {
   console.error(error);
   process.exit(1);
